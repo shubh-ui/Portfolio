@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Search, Menu, X } from 'lucide-react';
+import { LightIcon } from '@/app/Icon/icons';
 
 const Navbar = () => {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,21 +25,21 @@ const Navbar = () => {
           <div className="flex items-center w-full justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-3xl font-bold text-gray-900 tracking-wider">
+              <h1 className="text-2xl font-bold text-gray-900 tracking-wider">
                 Patil.
               </h1>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex flex-col gap-6">
+            <div className="hidden md:flex gap-4 items-center">
               {/* Auth Links */}
-              <div className="ml-auto flex items-center space-x-8">
+              <div className="ml-auto flex items-center space-x-2">
 
                   {navItems.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-gray-700 px-3 py-2 text-sm font-medium transition-all tracking-wide duration-200"
+                      className="text-gray-800 px-3 py-2 text-sm font-medium transition-all tracking-wide duration-200"
                     >
                       {item.name}
                     </a>
@@ -60,6 +61,9 @@ const Navbar = () => {
                     </button>
                   </div>
                 </div>
+              </div>
+              <div className='cursor-pointer'>
+                <LightIcon />
               </div>
             </div>
 
