@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 h-16 bg-white shadow-lg border-b border-gray-200 w-full">
+    <nav className="sticky top-0 z-50 h-16 bg-white shadow-sm border-b border-gray-200 w-full">
       {/* Full width navbar background */}
       <div className="w-full h-full flex items-center justify-center">
         {/* Centered content container matching main container width */}
