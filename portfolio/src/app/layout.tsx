@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Roboto, Open_Sans } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
 import "./animations.css"
 import Navbar from "@/components/Navbar";
