@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
+import { Geist_Mono, Inter, Roboto, Open_Sans } from "next/font/google";
 import "./globals.css";
+import "./animations.css"
 import Navbar from "@/components/Navbar";
 import CenteredContainer from "@/components/Container";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter', // optional: useful for Tailwind
+  fallback: ['system-ui', 'sans-serif'],
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-open-sans', // optional if you want to use with Tailwind
+  display: 'swap',
+  weight: ['300', '400', '600', '700'], // adjust as needed
+})
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -33,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${geistMono.variable} antialiased`}
+        lang="en" className={`${openSans.className} ${inter.className}`}
       >
         <Navbar />
         <CenteredContainer>
