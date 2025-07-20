@@ -72,7 +72,7 @@ const Skills = () => {
     }
     return (
         <section className="py-10 my-18">
-            <div style={{ opacity: 1, transform: 'none' }}>
+            <div style={{ opacity: 1, transform: 'none'}}>
                 <h2 className="text-3xl font-bold mb-6" style={{ opacity: 1, transform: 'none' }} >
                     My Skills
                 </h2>
@@ -82,7 +82,7 @@ const Skills = () => {
 
                 <div className="grid gap-10" style={{ opacity: 1 }}>
                     <div style={{ opacity: 1, transform: 'none' }}>
-                        <h3 className="text-xl font-semibold mb-4" style={{ transform: 'none' }}>Front End</h3>
+                        <h3 className="text-xl font-semibold mb-4 transition-transform duration-300 bounce-hover" style={{ transform: 'none' }}>Front End</h3>
                         <div className="flex flex-wrap gap-4">
                             {
                                 skills.FrontEnd.map((k) => {
@@ -102,7 +102,7 @@ const Skills = () => {
                         </div>
                     </div>
                       <div style={{ opacity: 1, transform: 'none' }}>
-                        <h3 className="text-xl font-semibold mb-4" style={{ transform: 'none' }}>Databases</h3>
+                        <h3 className="text-xl font-semibold mb-4 bounce-hover" style={{ transform: 'none' }}>Databases</h3>
                         <div className="flex flex-wrap gap-4">
                             {
                                 skills.DataBases.map((k) => {
@@ -123,7 +123,7 @@ const Skills = () => {
                       </div>
 
                       <div style={{ opacity: 1, transform: 'none' }}>
-                        <h3 className="text-xl font-semibold mb-4" style={{ transform: 'none' }}>Tools & Platforms</h3>
+                        <h3 className="text-xl font-semibold mb-4 bounce-hover" style={{ transform: 'none' }}>Tools & Platforms</h3>
                         <div className="flex flex-wrap gap-4">
                             {
                                 skills.Tools.map((k) => {
