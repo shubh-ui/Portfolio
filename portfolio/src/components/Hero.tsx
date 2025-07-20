@@ -22,11 +22,21 @@ const Hero = () => {
                             </div>
                     <p className="text-muted-foreground text-sm sm:text-base">A goal-oriented software developer with experience in building web applications using modern technologies like React, Next.js, and more. Seeking to leverage my technical skills to deliver exceptional user experiences.</p>
                     <div className="flex flex-wrap gap-2 sm:gap-3">
-                        <Button><DownloadIcon /> Resume</Button>
-                        <Button variant="outline"><Github /> </Button>
-                        <Button variant="outline"><Mail /></Button>
-                        <Button variant="outline"><Computer /></Button>
-                        <Button variant="outline"><Linkedin /></Button>
+                        <a target="_blank" href="./Shubham Patil - 3 Years.pdf">
+                        <Button className="cursor-pointer"><DownloadIcon /> Resume</Button>
+                        </a>
+                        <a target="_blank" href="https://github.com/shubh-ui">
+                            <Button className="cursor-pointer" variant="outline"><Github /> </Button>
+                        </a>
+                        <a href="mailto:shubhpatil8510@gmail.com">
+                            <Button className="cursor-pointer" variant="outline"><Mail /></Button>
+                        </a>
+                        <a target="_blank" href="https://leetcode.com/u/shubhpatil8510/">
+                            <Button className="cursor-pointer" variant="outline"><Computer /></Button>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/shubham-patil-04815a214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                            <Button className="cursor-pointer" variant="outline"><Linkedin /></Button>
+                        </a>
 
                     </div>
                 </div>

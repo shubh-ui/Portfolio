@@ -1,4 +1,4 @@
-import { CSS, Figma, Git, GitHub, HTML, Javascript, MongoDB, MySQL, NextJs, NPM, ReactJs, SCSS, Tailwind, Vercel, VsCode } from "@/app/Icon/icons"
+import { CSS, Figma, Git, GitHub, HTML, Javascript, MongoDB, MySQL, NextJs, NPM, ReactJs, SCSS, Tailwind, TypeScript, Vercel, VsCode } from "@/app/Icon/icons"
 
 const Skills = () => {
 
@@ -7,6 +7,10 @@ const Skills = () => {
             {
                 name: "Javascript",
                 icon: <Javascript />
+            },
+             {
+                name: "Typescript",
+                icon: <TypeScript />
             },
             {
                 name: "React.Js",
@@ -89,7 +93,7 @@ const Skills = () => {
                                     return (
                                         <div className="flex flex-col items-center gap-2 group" key={k.name} style={{ opacity: 1, transform: 'none' }}>
                                             <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center text-xl
-                                                group-hover:bg-muted/50 duration-300 transition-transform ease-in-out hover:-translate-y-2
+                                                group-hover:bg-muted/50 bounce-up-hover
                                                 border border-transparent group-hover:border-primary/20" style={{ transform: 'none' }}>
                                                     {k.icon}
                                             </div>
@@ -109,7 +113,7 @@ const Skills = () => {
                                     return (
                                         <div className="flex flex-col items-center gap-2 group" key={k.name} style={{ opacity: 1, transform: 'none' }}>
                                             <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center text-xl
-                                                group-hover:bg-muted/50 duration-300 transition-transform ease-in-out hover:-translate-y-2
+                                                group-hover:bg-muted/50 bounce-up-hover
                                                 border border-transparent group-hover:border-primary/20" style={{ transform: 'none' }}>
                                                     {k.icon}
                                             </div>
@@ -130,7 +134,7 @@ const Skills = () => {
                                     return (
                                         <div className="flex flex-col items-center gap-2 group" key={k.name} style={{ opacity: 1, transform: 'none' }}>
                                             <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center text-xl
-                                                group-hover:bg-muted/50 duration-300 transition-transform ease-in-out hover:-translate-y-2
+                                                group-hover:bg-muted/50 bounce-up-hover
                                                 border border-transparent group-hover:border-primary/20" style={{ transform: 'none' }}>
                                                     {k.icon}
                                             </div>
