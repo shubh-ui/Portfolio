@@ -191,3 +191,29 @@
 .animate-float-wave-slide {
     animation: floatWaveSlide 5s ease-in-out infinite;
 }
+
+
+@keyframes bounce-right-stay {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(8px);
+  }
+  70% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(6px);
+  }
+}
+
+.bounce-hover {
+  animation: none;
+  transition: transform 0.2s ease;
+}
+
+.bounce-hover:hover {
+  animation: bounce-right-stay 0.8s ease forwards;
+}
+
