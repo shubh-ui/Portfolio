@@ -1,4 +1,5 @@
 import Image from "next/image"
+import SCSSIcon from '/public/images/SCSS.svg';
 
 export const LightIcon = () => {
     return (
@@ -69,7 +70,7 @@ export const Tailwind = () => {
 
 export const SCSS = () => {
   return (
-    <Image src="/images/SCSS.svg" width={20} height={20} alt="SCSS" />
+    <Image src={SCSSIcon} width={20} height={20} alt="SCSS" />
   );
 };
 
