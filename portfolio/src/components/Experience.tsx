@@ -41,7 +41,7 @@ const Experience = () => {
 
 
     return (
-        <section className="py-10 my-18">
+        <section id="Experience" className="py-10 my-18">
             <div style={{ opacity: 1, transform: 'none' }}>
                 <h2 className="text-3xl font-bold mb-10 text-[#09090b]">Experience</h2>
                 <div className="space-y-10">
@@ -56,7 +56,7 @@ const Experience = () => {
                                 </p>
                             </div>
                             <p className="text-sm text-muted-foreground">
-                                May 2025 - Present
+                                Oct 2022 - March 2023
                             </p>
                         </div>
                         <ul className="list-disc ml-4">
@@ -90,7 +90,7 @@ const Experience = () => {
                                 </p>
                             </div>
                             <p className="text-sm text-muted-foreground">
-                                May 2025 - Present
+                                Apr 2023 - Present
                             </p>
                         </div>
                         <ul className="list-disc ml-4">
