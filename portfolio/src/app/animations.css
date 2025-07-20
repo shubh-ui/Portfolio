@@ -216,4 +216,22 @@
 .bounce-hover:hover {
   animation: bounce-right-stay 0.8s ease forwards;
 }
+/* Bounce Up Stay */
+@keyframes bounce-up-stay {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-9px);
+  }
+  70% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(-7px);
+  }
+}
 
+.bounce-up-hover:hover {
+  animation: bounce-up-stay 0.8s ease forwards;
+}
