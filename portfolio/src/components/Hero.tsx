@@ -1,4 +1,4 @@
-import { Computer, DownloadIcon, Github, Linkedin, LocationEdit, Mail } from "lucide-react";
+import { Computer, DownloadIcon, Github, Linkedin, LocationEdit, Mail, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import { MongoIcon, NextIcon, ReactIcon, TailwindIcon } from "@/app/Icon/icons";
 
@@ -16,7 +16,7 @@ const Hero = () => {
                         <a href="shubhpatil8510@gmail.com">shubhpatil8510@gmail.com</a>
                         </div>
                         <div className="flex items-center gap-1">
-                            <LocationEdit size={18} /> 
+                            <MapPin size={18} /> 
                             <span>Pune, India</span>
                             </div>
                             </div>
