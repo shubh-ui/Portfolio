@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Inter, Roboto, Open_Sans } from "next/font/google";
+import { Inter, Roboto, Open_Sans } from "next/font/google";
 import "./globals.css";
 import "./animations.css"
 import Navbar from "@/components/Navbar";
@@ -18,12 +18,6 @@ const openSans = Open_Sans({
   display: 'swap',
   weight: ['300', '400', '600', '700'], // adjust as needed
 })
-
-const roboto = Roboto({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-roboto'
-}) 
 
 export const metadata: Metadata = {
   title: "Create Next App",

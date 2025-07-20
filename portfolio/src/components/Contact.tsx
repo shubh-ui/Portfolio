@@ -10,6 +10,12 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 
+interface ContactProps {
+    name:string,
+    email:string,
+    message: string
+}
+
 const Contact = () => {
 
     const formSchema = z.object({
@@ -37,7 +43,7 @@ const Contact = () => {
         },
     })
 
-    const onSubmit = (data: any) => {
+    const onSubmit = (data: ContactProps) => {
         console.log("Submitted:", data)
         // you can send form data to API here
     }

@@ -77,7 +77,7 @@ const Skills = () => {
                     My Skills
                 </h2>
                 <p className="text-muted-foreground mb-10" style={{ opacity: 1, transform: 'none' }}>
-                    Technologies and tools I've worked with throughout my projects and experience
+                    Technologies and tools I&apos;ve worked with throughout my projects and experience
                 </p>
 
                 <div className="grid gap-10" style={{ opacity: 1 }}>

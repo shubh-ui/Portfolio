@@ -1,4 +1,4 @@
-import { Computer, DownloadIcon, Github, Linkedin, LocationEdit, Mail, MapPin } from "lucide-react";
+import { Computer, DownloadIcon, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import { MongoIcon, NextIcon, ReactIcon, TailwindIcon } from "@/app/Icon/icons";
 
