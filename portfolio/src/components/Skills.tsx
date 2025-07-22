@@ -75,7 +75,7 @@ const Skills = () => {
         ]
     }
     return (
-        <section className="py-10 my-18">
+        <section id="Skills" className="py-10 my-18">
             <div style={{ opacity: 1, transform: 'none'}}>
                 <h2 className="text-3xl font-bold mb-6" style={{ opacity: 1, transform: 'none' }} >
                     My Skills

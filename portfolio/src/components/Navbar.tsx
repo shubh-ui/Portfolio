@@ -1,20 +1,42 @@
 'use client'
 
 import React, { useState } from 'react';
-import { Search, Menu, X } from 'lucide-react';
+import { Search, Menu, X, Moon } from 'lucide-react';
 import { LightIcon } from '@/app/Icon/icons';
+import { useThemeState } from '@/Hooks/useThemeState';
 
 const Navbar = () => {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
+ const { isDark, setTheme, mounted } = useThemeState()
 
   const navItems = [
-    { name: 'About', href: '#' },
-    { name: 'Experience', href: '#' },
+    { name: 'About', href: 'Home' },
+    { name: 'Experience', href: 'Experience' },
     { name: 'Education', href: '#' },
-    { name: 'Skills', href: '#' },
-    { name: 'Projects', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Skills', href: 'Skills' },
+    { name: 'Projects', href: 'Projects' },
+    { name: 'Contact', href: 'Contact' },
   ];
+
+    const scrollToSection = (sectionId:string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      });
+    }
+  };
+
+   if (!mounted) {
+    return (
+      <button className="w-9 h-9 rounded-md border border-gray-300 dark:border-gray-600 flex items-center justify-center">
+        <div className="w-4 h-4 bg-gray-300 rounded animate-pulse" />
+      </button>
+    )
+  }
+
 
   return (
     <nav className="sticky top-0 z-50 h-16 bg-white shadow-sm border-b border-gray-200 w-full">
@@ -38,7 +60,8 @@ const Navbar = () => {
                   {navItems.map((item) => (
                     <a
                       key={item.name}
-                      href={item.href}
+                      // href={item.href}
+                      onClick={() => scrollToSection(item.href)}
                       className="text-gray-800 px-3 py-2 text-sm font-medium transition-all tracking-wide duration-200"
                     >
                       {item.name}
@@ -62,8 +85,11 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
-              <div className='cursor-pointer'>
-                <LightIcon />
+              <div className='cursor-pointer' onClick={() => setTheme(isDark ? 'light' : 'dark')}>
+                {
+                  isDark ? <LightIcon /> : <Moon />
+                }
+                
               </div>
             </div>
 

@@ -4,7 +4,7 @@ import { MongoIcon, NextIcon, ReactIcon, TailwindIcon } from "@/app/Icon/icons";
 
 const Hero = () => {
     return (
-        <section className="py-6 md:py-10">
+        <section id="Home" className="py-6 md:py-10">
             <div className="grid md:grid-cols-3 gap-10 items-center max-w-6xl mx-auto">
                 <div className="space-y-6 md:col-span-2" style={{ opacity: 1, transform: 'none' }}>
                     <div className="space-y-2">
