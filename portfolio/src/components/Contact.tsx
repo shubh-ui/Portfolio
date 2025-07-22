@@ -50,7 +50,7 @@ const Contact = () => {
 
 
     return (
-        <section className="py-10 my-20">
+        <section id="Contact" className="py-10 my-20">
             <div style={{ opacity: 1, transform: 'none' }}>
                 <h2 className="text-3xl font-bold mb-10">Contact Me</h2>
                 <div className="grid md:grid-cols-2 gap-10 items-start">
