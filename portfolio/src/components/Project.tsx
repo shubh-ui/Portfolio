@@ -84,7 +84,8 @@ const Project = () => {
                   {
                     project.images.map((img) =>
                    (
-                         <img
+                    <img
+                    key={img}
                     alt={project.title}
                     src={img}
                     className="w-full object-contain transition-transform duration-300 group-hover:scale-105"
