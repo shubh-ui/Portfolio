@@ -53,7 +53,7 @@ const projects = [
   liveLink: "https://ajio-clone.com", // Update with real live link
   githubLink: "https://github.com/shubh-ui/Ajio_commerce", // Update repo name if needed
   images: [
-    "/images/Ajio_1.png",
+    "/images/Ajio_1.2.png",
     "/images/Ajio_2.1.png",
     "/images/Ajio_3.png"
   ]
