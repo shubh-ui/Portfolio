@@ -2,32 +2,32 @@ import { GitHub } from "@/app/Icon/icons";
 import { Button } from "./ui/button";
 
 const projects = [
- {
-  title: "Medium - Blog Site",
-  deployed: false,
-  description:
-    "A full-featured blogging platform where users can read and write articles using a rich markdown editor. Users can follow authors, leave comments, and manage their own profiles. The platform supports real-time updates and responsive design.",
-  technologies: [
-    "React.js",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Tailwind CSS"
-  ],
-  features: [
-    "Rich text markdown editor for article creation",
-    "User authentication and authorization",
-    "Comment system with threaded replies",
-    "Follow/unfollow functionality for authors",
-    "Responsive design for mobile and desktop",
-    "MongoDB for scalable data storage",
-    "RESTful API built with Express.js",
-    "JWT-based authentication for secure routes"
-  ],
-  liveLink: "https://medium-clone.com", 
-  githubLink:"https://github.com/shubh-ui/medium_web",
-  images: ["/images/Medium_3.png","/images/Medium_1.png", "/images/Medium_2.png"] 
-},
+  {
+    title: "Medium - Blog Site",
+    deployed: false,
+    description:
+      "A full-featured blogging platform where users can read and write articles using a rich markdown editor. Users can follow authors, leave comments, and manage their own profiles. The platform supports real-time updates and responsive design.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS"
+    ],
+    features: [
+      "Rich text markdown editor for article creation",
+      "User authentication and authorization",
+      "Comment system with threaded replies",
+      "Follow/unfollow functionality for authors",
+      "Responsive design for mobile and desktop",
+      "MongoDB for scalable data storage",
+      "RESTful API built with Express.js",
+      "JWT-based authentication for secure routes"
+    ],
+    liveLink: "https://medium-clone.com",
+    githubLink: "https://github.com/shubh-ui/medium_web",
+    images: ["/images/Medium_3.png", "/images/Medium_1.png", "/images/Medium_2.png"]
+  },
  {
   title: "Ajio - Ecommerce Shopping Site",
   deployed: false,
