@@ -62,7 +62,7 @@ const Navbar = () => {
                       key={item.name}
                       // href={item.href}
                       onClick={() => scrollToSection(item.href)}
-                      className="text-gray-800 px-3 py-2 text-sm font-medium transition-all tracking-wide duration-200"
+                      className="text-gray-800 px-3 py-2 text-sm font-medium transition-all tracking-wide duration-200 cursor-pointer"
                     >
                       {item.name}
                     </a>
