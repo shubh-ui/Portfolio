@@ -18,10 +18,11 @@ const BackendProjectScreen = ({ APIEndPoints }: { APIEndPoints: object }) => {
         DELETE: "border-rose-600"
     }
 
+
     return (
         <div className="w-full h-full">
             {
-                keys.map((k, index) => (
+                keys.map((k) => (
                     <div className="p-2.5" key={k}>
                         <div className="text-center text-lg bg-gray-200 rounded-sm">
                             <h3>{k.toLocaleUpperCase()}</h3>
@@ -31,7 +32,7 @@ const BackendProjectScreen = ({ APIEndPoints }: { APIEndPoints: object }) => {
                             {
                                 //@ts-ignore
                                 APIEndPoints[k].map((router, i) => (
-                                    <div key={i} className={`p-1.5 border-l-4 ${RouterSideColor[router.method as keyof typeof RouterSideColor   ]} rounded-md my-2`}>
+                                    <div key={i} className={`p-1.5 border-l-4 ${RouterSideColor[router.method as keyof typeof RouterSideColor   ]} rounded-md my-2 hover:bg-sky-100 transition-all ease-in duration-300`}>
                                         <div className="flex gap-4 items-center">
                                             <div className={`${RouteBtnColor[router.method as keyof typeof RouteBtnColor]} text-white text-xs py-0.5 px-2 rounded-sm`}>
                                                 <span>{router.method}</span>
