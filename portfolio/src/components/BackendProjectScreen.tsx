@@ -1,4 +1,4 @@
-const BackendProjectScreen = ({ APIEndPoints }: { APIEndPoints: object }) => {
+const BackendProjectScreen = ({ APIEndPoints }: { APIEndPoints: any }) => {
 
     const keys = Object.keys(APIEndPoints);
 
@@ -30,8 +30,7 @@ const BackendProjectScreen = ({ APIEndPoints }: { APIEndPoints: object }) => {
 
                         <div className="text-sm">
                             {
-                                //@ts-ignore
-                                APIEndPoints[k].map((router, i) => (
+                                APIEndPoints[k].map((router :any, i: number) => (
                                     <div key={i} className={`p-1.5 border-l-4 ${RouterSideColor[router.method as keyof typeof RouterSideColor   ]} rounded-md my-2 hover:bg-sky-100 transition-all ease-in duration-300`}>
                                         <div className="flex gap-4 items-center">
                                             <div className={`${RouteBtnColor[router.method as keyof typeof RouteBtnColor]} text-white text-xs py-0.5 px-2 rounded-sm`}>
