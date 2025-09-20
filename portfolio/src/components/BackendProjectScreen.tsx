@@ -1,4 +1,14 @@
-const BackendProjectScreen = ({ APIEndPoints }: { APIEndPoints: any }) => {
+interface ApiEndpoint {
+  method: string;
+  route: string;
+  description: string;
+}
+
+interface ApiEndpoints {
+  [key: string]: ApiEndpoint[];  // Add this line to allow dynamic keys
+}
+
+const BackendProjectScreen = ({ APIEndPoints }: { APIEndPoints: ApiEndpoints }) => {
 
     const keys = Object.keys(APIEndPoints);
 
@@ -22,7 +32,7 @@ const BackendProjectScreen = ({ APIEndPoints }: { APIEndPoints: any }) => {
     return (
         <div className="w-full h-full">
             {
-                keys.map((k) => (
+                keys.map((k:string) => (
                     <div className="p-2.5" key={k}>
                         <div className="text-center text-lg bg-gray-200 rounded-sm">
                             <h3>{k.toLocaleUpperCase()}</h3>
@@ -30,7 +40,7 @@ const BackendProjectScreen = ({ APIEndPoints }: { APIEndPoints: any }) => {
 
                         <div className="text-sm">
                             {
-                                APIEndPoints[k].map((router :any, i: number) => (
+                                APIEndPoints[k].map((router :ApiEndpoint, i: number) => (
                                     <div key={i} className={`p-1.5 border-l-4 ${RouterSideColor[router.method as keyof typeof RouterSideColor   ]} rounded-md my-2 hover:bg-sky-100 transition-all ease-in duration-300`}>
                                         <div className="flex gap-4 items-center">
                                             <div className={`${RouteBtnColor[router.method as keyof typeof RouteBtnColor]} text-white text-xs py-0.5 px-2 rounded-sm`}>
