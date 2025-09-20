@@ -1,5 +1,6 @@
 import { GitHub } from "@/app/Icon/icons";
 import { Button } from "./ui/button";
+import BackendProjectScreen from "./BackendProjectScreen";
 
 const projects = [
   {
@@ -57,6 +58,134 @@ const projects = [
     "/images/Ajio_2.1.png",
     "/images/Ajio_3.png"
   ]
+},
+
+{
+  title: "Task Manager API - Project Management Backend",
+  deployed: false,
+  description: "A robust RESTful API backend for project and task management, featuring role-based authentication, team collaboration, and comprehensive dashboard analytics. Built for scalable project management applications with admin controls and user-specific data access.",
+  technologies: [
+    "Node.js",
+    "Express.js", 
+    "MongoDB",
+    "Mongoose ODM",
+    "JWT Authentication",
+    "bcryptjs"
+  ],
+  features: [
+    "JWT-based authentication with secure user registration and login",
+    "Role-based access control (Admin/User permissions)",
+    "Complete project lifecycle management with team member assignment",
+    "Advanced task management with status tracking and updates", 
+    "Comprehensive dashboard analytics for both admin and user views",
+    "User profile management with secure password handling",
+    "RESTful API design with proper HTTP status codes",
+    "MongoDB integration with optimized database queries",
+    "Middleware-based request validation and error handling",
+    "Admin-only protected routes for system management",
+    "User-specific data filtering and access control"
+  ],
+  apiEndpoints: {
+  authentication: [
+    {
+      method: "POST",
+      route: "/api/auth/register",
+      description: "User registration with email and password validation"
+    },
+    {
+      method: "POST", 
+      route: "/api/auth/login",
+      description: "User authentication and JWT token generation"
+    },
+    {
+      method: "GET",
+      route: "/api/auth/profile", 
+      description: "Get authenticated user profile information (Protected)"
+    },
+    {
+      method: "PUT",
+      route: "/api/auth/profile",
+      description: "Update user profile details and preferences (Protected)"
+    }
+  ],
+  projects: [
+    {
+      method: "POST",
+      route: "/api/projects",
+      description: "Create new project with team settings (Admin only)"
+    },
+    {
+      method: "POST",
+      route: "/api/projects/:projectId/members", 
+      description: "Add team members to existing project (Admin only)"
+    },
+    {
+      method: "GET",
+      route: "/api/projects",
+      description: "Get user-accessible projects with member details (Protected)"
+    }
+  ],
+  tasks: [
+    {
+      method: "GET",
+      route: "/api/tasks/dashboard-data",
+      description: "Admin dashboard analytics with project and task metrics (Protected)"
+    },
+    {
+      method: "GET", 
+      route: "/api/tasks/user-dashboard-data",
+      description: "User-specific dashboard data and assigned tasks overview (Protected)"
+    },
+      {
+      method: "POST",
+      route: "/api/tasks",
+      description: "Create new task with assignment and priority settings (Admin only)"
+    },
+    {
+      method: "GET",
+      route: "/api/tasks",
+      description: "Get all tasks with filtering, sorting, and pagination (Protected)"
+    },
+    {
+      method: "GET",
+      route: "/api/tasks/:id", 
+      description: "Get specific task details with full information (Protected)"
+    },
+    {
+      method: "PUT",
+      route: "/api/tasks/:id",
+      description: "Update task details, status, or assignment (Protected)"
+    },
+    {
+      method: "DELETE", 
+      route: "/api/tasks/:id",
+      description: "Delete task and associated data permanently (Admin only)"
+    }
+  ],
+  users: [
+    {
+      method: "GET",
+      route: "/api/users",
+      description: "Get all system users with roles and status (Admin only)"
+    },
+    {
+      method: "GET",
+      route: "/api/users/:id", 
+      description: "Get specific user details and project assignments (Protected)"
+    }
+  ]
+},
+  architecture: {
+    authentication: "JWT token-based stateless authentication",
+    authorization: "Role-based access control (RBAC)",
+    database: "MongoDB with Mongoose ODM for data modeling",
+    security: "Password hashing with bcrypt and protected routes middleware",
+    errorHandling: "Centralized error handling with custom middleware"
+  },
+  liveLink: "", 
+  githubLink: "https://github.com/yourusername/task-manager-api", 
+  apiDocumentation: "https://documenter.getpostman.com/view/your-collection", 
+  projectScreen: true
 }
 
 
@@ -82,7 +211,7 @@ const Project = () => {
                     className="w-full object-contain transition-transform duration-300 group-hover:scale-105"
                   /> */}
                   {
-                    project.images.map((img) =>
+                    project.images && project.images.map((img) =>
                    (
                     <img
                     key={img}
@@ -93,6 +222,7 @@ const Project = () => {
                    )
                     )
                   }
+                  {project?.projectScreen && <BackendProjectScreen APIEndPoints={project.apiEndpoints} />}
                 </div>
               </div>
 
