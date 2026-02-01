@@ -2,10 +2,9 @@ const Experience = () => {
     const Experience = {
         Meta_Intern: {
             keyPoints: [
-            { id: 1, key: "Led the development of a high-impact feature for the Indonesia client, resulting in a 40% increase in business conversions and improved user engagement." },
-            { id: 2, key: "Resolved multiple frontend bugs, contributing to better system stability and a smoother user experience." },
-            { id: 3, key: "Built a cross-product dashboard to surface key business metrics, tailored to meet specific organizational goals." },
-            { id: 4, key: "Collaborated closely with design and backend teams to ensure seamless integration and a consistent UI/UX across the platform." }
+            { id: 1, key: "Delivered a client-facing feature for an Indonesia-based customer, driving a 40% increase in business conversions and measurable improvements in user engagement." },
+            { id: 2, key: "Designed and developed a cross-product analytics dashboard to surface key business insig hts, supporting data-driven decisions across teams." },
+            { id: 3, key: "Resolved multiple production bugs, improving overall system stability and user experience." },
         ],
         tech:[
             {id:1, value: "React"},
@@ -18,13 +17,13 @@ const Experience = () => {
         },
         Meta_Developer: {
             keyPoints: [
-            { id: 1, key: "Led development of a scalable API Integration platform serving enterprise clients (MenuLife Hong Kong, SunLife Malaysia,SunLife Vietnam) building the entire frontend from scratch." },
-            { id: 2, key: "Architected and implemented Micro-Frontend Architecture, enabling independent team deployments and reducing development bottlenecks by 60%." },
-            { id: 3, key: "Collaborated cross-functionally with backend, product, and design teams to deliver seamless user experiences and critical business features on tight deadlines." },
-            { id: 4, key: "Optimized application performance through advanced techniques including route-based lazy loading and image optimization, achieving 25% reduction in page load times." },
-            { id: 5, key: "Established robust testing infrastructure with Jest and Cypress, implementing comprehensive unit and end-to-end test suites to ensure enterprise-grade code quality." },
-            { id: 6, key: "Built a fully functional Workflow Builder module UI from scratch, extending a BPMN library to support business-specific logic and customization." }, 
-            { id: 7, key: "Contributed to key architectural decisions that streamlined system integration processes, reducing integration time by 60% and improving developer productivity." }
+            { id: 1, key: "Led development of a scalable API integration product, owning the entire Frontend from ground up and mentoring a team of two engineers. Product is adopted across enterprise market in Hong Kong, Malaysia and Vietnam." },
+            { id: 2, key: "Architected and implemented a Micro-Frontend architecture, improving application performance by 20% through memoization strategies and optimized event handling using debouncing and throttling." },
+            { id: 3, key: "Designed and developed a modular, node-driven Agent Workflow Builder with dynamic graph rendering, connection validation, custom node types, and real-time state sync hronization, collaborating closely with backend, product, and design teams." },
+            { id: 4, key: "Reduced bundle size by 45% by applying advanced optimization techniques such as code splitting, route-based lazy loading, and image optimization, resulting in a 25% reduction in initial page load times." },
+            { id: 5, key: "Owned the Frontend lifecycle end-to-end, from development to production and improved release reliability by implemanting end to end test cases using playwright." },
+            { id: 6, key: "Contributed to key architectural decisions and drove Frontend best practices through rigorous code reviews, improving code scalability and developer productivity, while conducting 20+ technical interviews to support team growth." }, 
+            { id: 7, key: "Developed RESTful APIs using Node.js, focusing on clean API design, validation, and Frontend-backend integration." }
 
         ],
         tech: [
@@ -32,6 +31,8 @@ const Experience = () => {
             {id:2, value: "Javascript"},
             {id:3, value: "Typescript"},
             {id:4, value: "Ant Design"},
+            {id:1, value: "RTK Query"},
+            {id:1, value: "Redux-toolkit"},
             {id:5, value: "SCSS"},
             {id:6, value: "Webpack"},
             {id:7, value: "Angular"}
