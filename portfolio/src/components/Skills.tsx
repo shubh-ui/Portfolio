@@ -1,4 +1,4 @@
-import { CSS, Figma, Git, GitHub, HTML, Javascript, MongoDB, MySQL, NextJs, NPM, ReactJs, SCSS, Tailwind, TypeScript, Vercel, VsCode } from "@/app/Icon/icons"
+import { CSS, Figma, Git, GitHub, HTML, Javascript, MongoDB, MySQL, NextJs, NPM, ReactJs, SCSS, Tailwind, TypeScript, Vercel, VsCode, RTKQueryIcon } from "@/app/Icon/icons"
 
 const Skills = () => {
 
@@ -35,6 +35,10 @@ const Skills = () => {
             {
                 name: "Tailwind CSS",
                 icon: <Tailwind />
+            },
+             {
+                name: "RTK Query",
+                icon: <RTKQueryIcon />
             },
         ],
         DataBases: [

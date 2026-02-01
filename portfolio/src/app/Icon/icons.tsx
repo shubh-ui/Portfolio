@@ -35,6 +35,51 @@ export const Javascript = () => {
     )
 }
 
+
+export const RTKQueryIcon = () => {
+  return (
+    <svg
+      style={{ fontSize: '28px', color: '#764ABC' }}
+      stroke="currentColor"
+      fill="none"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="RTK Query"
+    >
+      <circle cx="12" cy="12" r="2" fill="#764ABC" />
+      <g stroke="#764ABC">
+        <ellipse
+          cx="12"
+          cy="12"
+          rx="10"
+          ry="4"
+          transform="rotate(60 12 12)"
+        />
+        <ellipse
+          cx="12"
+          cy="12"
+          rx="10"
+          ry="4"
+          transform="rotate(120 12 12)"
+        />
+        <ellipse
+          cx="12"
+          cy="12"
+          rx="10"
+          ry="4"
+          transform="rotate(0 12 12)"
+        />
+      </g>
+    </svg>
+  )
+}
+
+
+
 export const TypeScript = () => {
   return (
     <svg 
