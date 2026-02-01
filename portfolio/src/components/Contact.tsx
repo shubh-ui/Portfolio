@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { useState } from "react"
 
 interface ContactProps {
     name:string,
@@ -17,6 +18,8 @@ interface ContactProps {
 }
 
 const Contact = () => {
+    const [status, setStatus] = useState<"idle" | "loading" | "success">("idle")
+
 
     const formSchema = z.object({
         name: z
@@ -43,10 +46,25 @@ const Contact = () => {
         },
     })
 
-    const onSubmit = (data: ContactProps) => {
-        console.log("Submitted:", data)
-        // you can send form data to API here
-    }
+const onSubmit = async (data:any) => {
+  try {
+    setStatus("loading");
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+
+    if (!res.ok) throw new Error("Failed")
+    setStatus("success");
+    form.reset();
+    setTimeout(() => {
+      setStatus("idle");
+    }, 5000);
+  } catch (error) {
+    alert("Something went wrong ❌")
+  }
+}
 
 
     return (
@@ -117,7 +135,10 @@ const Contact = () => {
 
                     {/* Contact Form Column */}
                     <div>
-                        <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
+                        {
+                            status == 'success' ? <SuccessState /> : (
+                                <div>
+                            <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
                         <Form {...form}>
                             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                                 <div className="grid sm:grid-cols-2 gap-4">
@@ -163,11 +184,15 @@ const Contact = () => {
                                     )}
                                 />
 
-                                <Button type="submit" className="w-full">
+                                <Button type="submit" className="w-full cursor-pointer">
                                     Submit Message
                                 </Button>
                             </form>
                         </Form>
+                        </div>
+                            )
+                        }
+                        
                     </div>
                 </div>
 
@@ -177,3 +202,24 @@ const Contact = () => {
 }
 
 export default Contact
+
+
+
+const SuccessState = () => (
+  <div className="flex min-h-[320px] flex-col items-center justify-center rounded-xl border bg-background px-6 text-center">
+    
+    {/* Animated check */}
+    <div className="relative mb-6 flex h-24 w-24 items-center justify-center">
+      <span className="absolute h-full w-full animate-ping rounded-full bg-emerald-400/30" />
+      <span className="absolute h-20 w-20 rounded-full bg-emerald-400/20" />
+      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500">
+        ✓
+      </span>
+    </div>
+
+    <h3 className="text-xl font-semibold">Message sent successfully</h3>
+    <p className="mt-2 text-sm text-muted-foreground">
+      Thanks for reaching out. I’ll get back to you soon.
+    </p>
+  </div>
+)
