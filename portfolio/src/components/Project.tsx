@@ -29,6 +29,41 @@ const projects = [
     githubLink: "https://github.com/shubh-ui/medium_web",
     images: ["/images/Medium_3.png", "/images/Medium_1.png", "/images/Medium_2.png"]
   },
+  {
+  title: "NodeBase - AI Powered Automation Platform",
+  deployed: false,
+  description:
+    "A no-code AI-powered workflow automation platform inspired by n8n that enables users to build automation pipelines using a visual drag-and-drop interface. Users can connect trigger nodes, AI execution nodes, and action nodes to automate repetitive workflows such as processing Google Form submissions, generating AI summaries, and sending emails automatically.",
+  technologies: [
+    "Next.js",
+    "React.js",
+    "PostgreSQL",
+    "Prisma",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "Gemini AI",
+    "OpenAI",
+    "Inngest"
+  ],
+  features: [
+    "Visual drag-and-drop workflow builder for creating automation pipelines",
+    "Custom trigger nodes including Google Forms integration",
+    "AI execution nodes powered by Gemini and OpenAI",
+    "End-to-end workflow automation without writing code",
+    "Automated form submission processing and AI-based summarization",
+    "Email automation with dynamic AI-generated content",
+    "Workflow orchestration using Inngest background jobs",
+    "PostgreSQL database with Prisma ORM for reliable data management",
+    "Responsive and modern UI built with Next.js, React, Tailwind CSS, and shadcn/ui"
+  ],
+  liveLink: "",
+  githubLink: "",
+  images: [
+    "/images/Workflow_execution.png",
+    "/images/workflow_list.png",
+    "/images/Http_config.png"
+  ]
+},
  {
   title: "Ajio - Ecommerce Shopping Site",
   deployed: false,
