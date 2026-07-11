@@ -59,7 +59,7 @@ const projects = [
   liveLink: "",
   githubLink: "",
   images: [
-    "/images/Workflow_execution.png",
+    "/images/workflow_execution.png",
     "/images/workflow_list.png",
     "/images/Http_config.png"
   ]
